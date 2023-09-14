@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Banner -->
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:text="Student Details"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- TableLayout for Name, Roll No, and Marks -->
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner"
+        android:layout_marginTop="20dp"
+        android:stretchColumns="1">
+
+        <!-- Roll No -->
+        <TableRow>
+            <TextView
+                android:id="@+id/textRollNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roll No:"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editRollNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter Roll No"
+                android:minHeight="48dp" />
+        </TableRow>
+
+        <!-- Name -->
+        <TableRow>
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter Name"
+                android:minHeight="48dp" />
+        </TableRow>
+
+        <!-- Marks -->
+        <TableRow>
+            <TextView
+                android:id="@+id/textMarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marks:"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editMarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter Marks"
+                android:minHeight="48dp" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Submit" />
+
+    <!-- TableLayout for Buttons (Update, View All, View, Delete) -->
+    <TableLayout
+        android:id="@+id/buttonTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_marginTop="20dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <!-- Update Button -->
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Update" />
+
+            <!-- View All Button -->
+            <Button
+                android:id="@+id/btnViewAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="View All" />
+        </TableRow>
+
+        <TableRow>
+            <!-- View Button -->
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="View" />
+
+            <!-- Delete Button -->
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete" />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:id="@+id/textStudentDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonTableLayout"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:text=""
+        android:textSize="18sp"
+        android:background="@android:color/white"
+        android:scrollbars="vertical"
+        android:maxLines="10" />
+
+</RelativeLayout>
